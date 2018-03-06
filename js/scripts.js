@@ -1,3 +1,4 @@
+
 //Initialise Firebase
 
 var config = {
@@ -32,6 +33,11 @@ if (user) {
 }
 });
 
+
+
+
+
+
 $(document).ready(function() {
   $("input#signout").click(function() {
     firebase.auth().signOut().then(function() {
@@ -40,3 +46,7 @@ $(document).ready(function() {
     })
   });
 });
+
+//user interface logic
+
+// consttructor for the interface
