@@ -9,8 +9,10 @@ var config = {
   messagingSenderId: "999310279072"
 };
 firebase.initializeApp(config)
+//database query 
+var database = firebase.database(); 
 var uiConfig = {
-  signInSuccessUrl: '/index2.html',
+  signInSuccessUrl: '/profile.html',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
   ],
@@ -26,6 +28,8 @@ ui.start("#firebaseui-auth-container", uiConfig);
 firebase.auth().onAuthStateChanged(function(user){
 if (user) {
   console.log("logged in");
+  var li ;
+  $('li#member').hide();
 
 } else {
   console.log("not logged in");
