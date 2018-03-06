@@ -30,13 +30,13 @@ if (user) {
   console.log("logged in");
   $('#firebaseui-auth-container').hide()
   $('li#member').hide();
-  $('a#signOut').show()
-  $('a#signOut').click(function(){
-    firebase.auth().signOut().then(function(){
-      location.replace("/index.html");
+    $('a#signOut').show()
+    $('a#signOut').click(function(){
+      firebase.auth().signOut().then(function(){
+        location.replace("/index.html");
 
-    })
-  });
+      })
+    });
 
 } else {
   console.log("not logged in");
