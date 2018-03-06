@@ -10,6 +10,16 @@ var config = {
   messagingSenderId: "999310279072"
 };
 firebase.initializeApp(config)
+const preObject=document.getElementById('object')
+//setting up realtime databaseURL
+// Get a reference to the database service
+
+const ref=firebase.database().ref().child("object");
+//sync object changes
+ref.on("value" , snap => {
+  preObject.innerText =JSON.stringify(snap.val() , null ,3)
+});
+
 var uiConfig = {
   signInSuccessUrl: '/index2.html',
   signInOptions: [
@@ -34,7 +44,23 @@ if (user) {
 });
 
 
-
+// // Get a reference to the database service
+// var database = firebase.database();
+// // save the user's profile into Firebase so we can list users,
+// // use them in Security and Firebase Rules, and show profiles
+// function writeUserData(userId, name, email, imageUrl) {
+//   firebase.database().ref('users/' + userId).set({
+//     username: name,
+//     email: email
+//     //some more user data
+//   });
+// }//Get the current userID
+// var userId = firebase.auth().currentUser.uid;
+// //Get the user data
+// return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+//     //Do something with your user data located in snapshot
+// });
+//
 
 
 
