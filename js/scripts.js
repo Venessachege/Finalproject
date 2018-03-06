@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4616b0fccfd927a95f04476c2428c38052bb41e3
 //Initialise Firebase
 
 var config = {
@@ -33,6 +37,11 @@ if (user) {
 }
 });
 
+
+
+
+
+
 $(document).ready(function() {
   $("input#signout").click(function() {
     firebase.auth().signOut().then(function() {
@@ -41,8 +50,15 @@ $(document).ready(function() {
     })
   });
 });
+<<<<<<< HEAD
 =======
 //user interface logic
 
 // consttructor for the interface
 >>>>>>> a945ef36bc112be9045b0895de3bdfb49846e9e9
+=======
+
+//user interface logic
+
+// consttructor for the interface
+>>>>>>> 4616b0fccfd927a95f04476c2428c38052bb41e3
