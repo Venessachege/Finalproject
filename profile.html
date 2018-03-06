@@ -10,6 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.css" />
+
     <title>Document</title>
 </head>
 
@@ -22,10 +23,13 @@
                     <a href="#">
                         <li>Public</li>
                     </a>
-                    <a href="#" onclick="" data-toggle="modal" data-target="#myModal">
+                    <a href="#" onclick="" data-toggle="modal" data-target="#myModal" sty>
                         <li id="member">Member log-in</li>
                     </a>
-                    <a href="#">
+                    <a href="#" id="signOut">
+                        <li>Signout</li>
+                    </a>
+                    <a href="#" >
                         <li>Competitions</li>
                     </a>
                 </ul>
@@ -62,7 +66,7 @@
                     <img src="/Images/pig 2.png" class="img img-responsive">
                 </div>
                 <ul class="list-group text-center">
-                    <li class="list-group-item" id="name">Name</li>
+                    <li class="list-group-item" id="name"></li>
                     <li class="list-group-item">Best Project</li>
                     <li class="list-group-item">Current Project</li>
                 </ul>

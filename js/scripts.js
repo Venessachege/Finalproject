@@ -1,4 +1,3 @@
-
 var config = {
   apiKey: "AIzaSyDXxkIIamQTZQsTrrXhcJMuwfQEXE5P23A",
   authDomain: "finalproject-6363d.firebaseapp.com",
@@ -35,48 +34,40 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
 //start method will wait until the DOM is loaded
 ui.start("#firebaseui-auth-container", uiConfig);
 
-firebase.auth().onAuthStateChanged(function(user){
-if (user) {
-  console.log("logged in");
-  // var li ;
-  // // $('li#member').hide();
-  user.providerData.forEach(function (profile) {
-    var name=("  Name: " + profile.displayName);
-    var email=("  Email: " + profile.email);
-    var photo=("  Photo URL: " + profile.photoURL);
-  });
+firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("logged in");
 
-} else {
-  console.log("not logged in");
-}
-});
+        $('#firebaseui-auth-container').hide()
+        $('li#member').hide();
+        $('a#signOut').show()
 
-// // Get a reference to the database service
-// var database = firebase.database();
-// // save the user's profile into Firebase so we can list users,
-// // use them in Security and Firebase Rules, and show profiles
-// function writeUserData(userId, name, email, imageUrl) {
-//   firebase.database().ref('users/' + userId).set({
-//     username: name,
-//     email: email
-//     //some more user data
-//   });
-// }//Get the current userID
-// var userId = firebase.auth().currentUser.uid;
-// //Get the user data
-// return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-//     //Do something with your user data located in snapshot
+//         user.providerData.forEach(function(profile) {
+//             var name = ("  Name: " + profile.displayName);
+//             var email = ("  Email: " + profile.email);
+//             var photo = ("  Photo URL: " + profile.photoURL);
 // });
-//
+            $('a#signOut').click(function() {
+              firebase.auth().signOut().then(function() {
+                location.replace("/index.html");
 
+              })
 
+            });
 
-$(document).ready(function() {
-  $("input#signout").click(function() {
-    firebase.auth().signOut().then(function() {
-      location.replace("/index.html");
+          } else {
+            console.log("not logged in");
+            $('a#signOut').hide();
+          }
+        });
 
-    })
-  });
-  $("ul#name").append(name)
-});
+      $(document).ready(function() {
+        $("input#signout").click(function() {
+          firebase.auth().signOut().then(function() {
+            location.replace("/index.html");
+
+          })
+        });
+
+        $("ul#name").append(name);
+      });

@@ -5,6 +5,9 @@
 .container-fluid{
  padding:0px;
 } */
+#signOut{
+    display: none;
+}
 nav ul li{
     float:left;
     list-style:none;
