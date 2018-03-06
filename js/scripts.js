@@ -28,11 +28,19 @@ ui.start("#firebaseui-auth-container", uiConfig);
 firebase.auth().onAuthStateChanged(function(user){
 if (user) {
   console.log("logged in");
-  var li ;
+  $('#firebaseui-auth-container').hide()
   $('li#member').hide();
+  $('a#signOut').show()
+  $('a#signOut').click(function(){
+    firebase.auth().signOut().then(function(){
+      location.replace("/index.html");
+
+    })
+  });
 
 } else {
   console.log("not logged in");
+  $('a#signOut').hide()
 }
 });
 
