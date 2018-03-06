@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.css" />
 
     <title>Document</title>
@@ -66,13 +67,15 @@
                     <img src="/Images/pig 2.png" class="img img-responsive">
                 </div>
                 <ul class="list-group text-center">
-                    <li class="list-group-item">Name</li>
-                    <li class="list-group-item">Best Project</li>
+                    <li class="list-group-item" id="name">Name</li>
+                    <li class="list-group-item" id="email">Best Project</li>
                     <li class="list-group-item">Current Project</li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <div class="well" style="height:40vh"></div>
+                <div class="well" style="height:40vh" id="image">
+                    <!-- <pre id="object"></pre> -->
+                </div>
                 <div class="text-center">
                     <button class="btn btn-primary">Edit Profile</button>
                     <button class="btn btn-primary">Hire</button>
