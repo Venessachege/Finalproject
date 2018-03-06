@@ -34,9 +34,24 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
 //start method will wait until the DOM is loaded
 ui.start("#firebaseui-auth-container", uiConfig);
 
+
 firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log("logged in");
+
+firebase.auth().onAuthStateChanged(function(user){
+if (user) {
+  console.log("logged in");
+  $('#firebaseui-auth-container').hide();
+  $('li#member').hide();
+    $('a#signOut').show()
+    $('a#signOut').click(function(){
+      firebase.auth().signOut().then(function(){
+        location.replace("/index.html");
+
+      });
+    });
+
 
         $('#firebaseui-auth-container').hide()
         $('li#member').hide();
