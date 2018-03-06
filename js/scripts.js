@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Initialise Firebase
 
 var config = {
@@ -40,3 +41,8 @@ $(document).ready(function() {
     })
   });
 });
+=======
+//user interface logic
+
+// consttructor for the interface
+>>>>>>> a945ef36bc112be9045b0895de3bdfb49846e9e9
