@@ -28,14 +28,14 @@ ui.start("#firebaseui-auth-container", uiConfig);
 firebase.auth().onAuthStateChanged(function(user){
 if (user) {
   console.log("logged in");
-  $('#firebaseui-auth-container').hide()
+  $('#firebaseui-auth-container').hide();
   $('li#member').hide();
     $('a#signOut').show()
     $('a#signOut').click(function(){
       firebase.auth().signOut().then(function(){
         location.replace("/index.html");
 
-      })
+      });
     });
 
 } else {
