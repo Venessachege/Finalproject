@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.css" />
 
     <title>Document</title>
@@ -61,105 +62,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="well">
+                <div class="well" >
+                  <img  alt="" id="pic">
                     <!-- contains icture of the user -->
-                    <img src="/Images/pig 2.png" class="img img-responsive">
+            <!-- <p> <span class="glyphicon glyphicon-user" id="pic"></span></p>  -->
                 </div>
                 <ul class="list-group text-center">
-                    <li class="list-group-item">Name</li>
-                    <li class="list-group-item">Best Project</li>
+                    <li class="list-group-item" id="name">Name</li>
+                    <li class="list-group-item" id="email">Best Project</li>
                     <li class="list-group-item">Current Project</li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <div class="well" style="height:40vh"></div>
-                <div class="text-center">
-                    <button class="btn btn-primary">Edit Profile</button>
-                    <button class="btn btn-primary">Hire</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/scripts.js"></script>
-</body>
-
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.css" />
-
-    <title>Document</title>
-</head>
-
-<body>
-    <div class="container-fluid">
-
-        <div class="header row">
-            <nav>
-                <ul>
-                    <a href="#">
-                        <li>Public</li>
-                    </a>
-                    <a href="#" onclick="" data-toggle="modal" data-target="#myModal" >
-                        <li id="member" >Member log-in</li>
-                    </a>
-                    <a href="#" id="signOut">
-                        <li>Signout</li>
-                    </a>
-                    <a href="#" >
-                        <li>Competitions</li>
-                    </a>
-                </ul>
-            </nav>
-            <div class="pull-right">
-                <input type="text" value="search" id="serchBox">
-                <input type="button" value="Search" class="btn btn-primary">
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                        </div>
-                        <div class="modal-body text-center" id="firebaseui-auth-container">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="well">
-                    <!-- contains icture of the user -->
-                    <img src="/Images/pig 2.png" class="img img-responsive">
-                </div>
-                <ul class="list-group text-center">
-                    <li class="list-group-item" id="name"></li>
-                    <li class="list-group-item">Best Project</li>
-                    <li class="list-group-item">Current Project</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <div class="well" style="height:40vh">
+                <div class="well" style="height:40vh" id="image">
                     <!-- <pre id="object"></pre> -->
                 </div>
                 <div class="text-center">

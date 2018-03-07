@@ -6,9 +6,24 @@ var config = {
   storageBucket: "finalproject-6363d.appspot.com",
   messagingSenderId: "999310279072"
 };
+
+
 firebase.initializeApp(config)
-//database query
-var database = firebase.database();
+// Get a reference to the database service
+// var database = firebase.database().ref('users');
+var user = firebase.auth().currentUser;
+
+// if (user != null) {
+//   user.providerData.forEach(function(profile) {
+//     console.log("Sign-in provider: " + profile.providerId);
+//     console.log("  Provider-specific UID: " + profile.uid);
+//     console.log("  Name: " + profile.displayName);
+//     console.log("  Email: " + profile.email);
+//     console.log("  Photo URL: " + profile.photoURL);
+//   });
+// }
+//firebase ui
+
 var uiConfig = {
   signInSuccessUrl: '/profile.html',
   signInOptions: [
@@ -23,19 +38,39 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
 //start method will wait until the DOM is loaded
 ui.start("#firebaseui-auth-container", uiConfig);
 
-firebase.auth().onAuthStateChanged(function(user){
-if (user) {
-  console.log("logged in");
-  $('#firebaseui-auth-container').hide();
-  $('li#member').hide();
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user!=null) {
+    //loop to
+
+    user.providerData.forEach(function(profile) {
+      // console.log("Sign-in provider: " + profile.providerId);
+      console.log("  Provider-specific UID: " + profile.uid);
+      // console.log("  Name: " + profile.displayName);
+      // console.log("  Email: " + profile.email);
+      console.log("  Photo URL: " + profile.photoURL);
+      $('li#name').text(profile.displayName)
+      $('li#email').text(profile.email)
+      $('#pic').text(profile.photoURL)
+      $('#pic').attr("src",profile.photoURL)
+
+    });
+    ///end loop
+    console.log("logged in");
+    $('#firebaseui-auth-container').hide();
+    $('li#member').hide();
     $('a#signOut').show()
-    $('a#signOut').click(function(){
-      firebase.auth().signOut().then(function(){
+    $('a#signOut').click(function() {
+      firebase.auth().signOut().then(function() {
         location.replace("/index.html");
 
       });
     });
-}else{
+  } else {
 
-}
+  }
+});
+// Database
+
+$(document).ready(function() {
+
 });

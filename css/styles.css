@@ -12,11 +12,11 @@ nav ul li{
     float:left;
     list-style:none;
     padding:10px;
-    
+
 }
 #carousel-example-generic{
     height:200px;
-    
+
 }
 /* .header input,.header button{
     float:right;
@@ -34,9 +34,17 @@ nav ul li{
     height:100px;
     background:lightgrey;
     text-align:center;
-    
-    
+
+
 }
 .footer p{
     margin-top:40px;
+}
+.glyphicon{
+  font-size: 400px;
+  text-align: center;
+}
+img{
+  height: 400px;
+  width: 400px;
 }
