@@ -51,7 +51,7 @@ $(document).ready(function() {
 
   // consttructor for the people to store profile
 
- function person (picture,name,bestproject,personalPortfolio){
+ person (picture,name,bestproject,personalPortfolio){
       this.picture=picture;
       this.name=name;
       this.bestproject=bestproject;
@@ -59,9 +59,30 @@ $(document).ready(function() {
  }
 
  //array to store the people
-  var people=[];
-  // function to pus people into the array
-   var portPeople = function (){
-       //get all the requirements form person or database
-       var picture =       $('')
-   }
+  var people=[{person1:{
+                       name:"",
+                       bestproject:"",
+                       PersonalPortfolio:"",
+                       Picturelink: "",
+                      }},
+                      {person2:{
+                        name:"",
+                        bestproject:"",
+                        PersonalPortfolio:""
+                       }},
+                       {person3:{
+                        name:"",
+                        bestproject:"",
+                        PersonalPortfolio:""
+                       }},
+                       {person4:{
+                        name:"",
+                        bestproject:"",
+                        PersonalPortfolio:""
+                       }},
+                       {person5:{
+                        name:"",
+                        bestproject:"",
+                        PersonalPortfolio:""
+                       }}
+  ];

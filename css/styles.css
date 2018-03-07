@@ -37,3 +37,8 @@ ul li{
 .footer p{
     margin-top:40px;
 }
+.uk-card-media-top img{
+    display:flex;
+    align-items:center;
+
+}
