@@ -40,6 +40,7 @@ nav ul li{
 .footer p{
     margin-top:40px;
 }
+
 .glyphicon{
   font-size: 400px;
   text-align: center;
@@ -47,4 +48,10 @@ nav ul li{
 img{
   height: 400px;
   width: 400px;
+}
+
+.uk-card-media-top img{
+    display:flex;
+    align-items:center;
+
 }
