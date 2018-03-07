@@ -13,7 +13,7 @@ firebase.initializeApp(config)
 
 
 
-
+var userId = 0;
 //firebase ui
 
 var uiConfig = {
@@ -34,36 +34,33 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user != null) {
     //loop to
 
+
     user.providerData.forEach(function(profile) {
       // console.log("Sign-in provider: " + profile.providerId);
       console.log("  Provider-specific UID: " + profile.uid);
+      userId = profile.uid;
       // console.log("  Name: " + profile.displayName);
       // console.log("  Email: " + profile.email);
       console.log("  Photo URL: " + profile.photoURL);
       $('li#name').text(profile.displayName)
       $('li#email').text(profile.email)
       $('#pic').text(profile.photoURL)
-      $('#pic').attr("src", profile.photoURL)
-        var userId=profile.uid;
+      $('.pic').attr("src", profile.photoURL)
+
 
 
     });
     ///end loop
-
-
-
-
-$('#firebaseui-auth-container').hide();
+    $('#firebaseui-auth-container').hide();
     $('li#member').hide();
     $('a#signOut').show()
     $('a#signOut').click(function() {
       firebase.auth().signOut().then(function() {
         location.replace("/index.html");
-
       });
     });
   } else {
-
+    messageResults = '';
   }
 });
 // Database
@@ -84,18 +81,28 @@ $(document).ready(function() {
     });
     messageField.value = '';
   }
-$("#savedata").click(function(){
-  savedata()
-})
-  // Update results when data is added
-messagesRef.child('users').child(userId).limitToLast(10).on('child_added', function(snapshot) {
-  var data = snapshot.val();
-  var message = data.text;
 
-  if (message != undefined) {
-    messageResults.value += '\n' + message;
-  }
-});
+  $("#savedata").click(function() {
+    savedata()
+  })
+
+
+
+  setTimeout(function(){
+    messagesRef.child('users').child(userId).limitToLast(10).on('child_added', function(snapshot) {
+      var data = snapshot.val();
+      var message = data.text;
+
+      if (message != undefined) {
+        messageResults.value += '\n' + message;
+      }
+    });
+   }, 3000);
+
+  // Update results when data is added
+
+  console.log("snsjns");
+
 });
 
 //user interface logic
