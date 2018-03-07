@@ -1,28 +1,25 @@
-/* body{
+body{
     padding:0px;
     margin:0px;
 }
 .container-fluid{
  padding:0px;
-} */
-#signOut{
-    display: none;
 }
-nav ul li{
+ul li{
     float:left;
     list-style:none;
     padding:10px;
-
+    
 }
 #carousel-example-generic{
     height:200px;
-
+    
 }
-/* .header input,.header button{
+.header input,.header button{
     float:right;
     padding:0px;
     margin:20px;
-} */
+}
 .item{
     margin:0px;
     border-radius:5px;
@@ -34,22 +31,9 @@ nav ul li{
     height:100px;
     background:lightgrey;
     text-align:center;
-
-
+    
+    
 }
 .footer p{
     margin-top:40px;
-}
-.uk-card-media-top img{
-    display:flex;
-    align-items:center;
-
-}
-.glyphicon{
-  font-size: 400px;
-  text-align: center;
-}
-img{
-  height: 400px;
-  width: 400px;
 }
