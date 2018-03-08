@@ -78,21 +78,22 @@ $(document).ready(function() {
 
   var messagesRef = firebase.database().ref();
   var messageField = document.getElementById('messageInput');
+  // var messageField = document.getElementById('messageInput2');
   var messageResults = document.getElementById('results');
 
   // Save data to firebase
   function savedata() {
     var message = messageField.value;
 
-    messagesRef.child('users').child(userId).push(profile);
+    // messagesRef.child('users').child(userId).push(profile);
+    // messageField.value = '';
+  // }
+    messagesRef.child('users').child(userId).push({
+      fieldName: 'messageField',
+      text: message
+    });
     messageField.value = '';
   }
-  //   messagesRef.child('users').child(userId).push({
-  //     fieldName: 'messageField',
-  //     text: message
-  //   });
-  //   messageField.value = '';
-  // }
 
   $("#savedata").click(function() {
     savedata()
