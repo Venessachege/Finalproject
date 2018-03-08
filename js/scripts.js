@@ -80,9 +80,9 @@ $(document).ready(function() {
   var messageField = document.getElementById('messageInput');
   // var messageField = document.getElementById('messageInput2');
 
-  var messagePortfolio=documrnt.getElementById("portfolio")
-  var messageTech=documrnt.getElementById('tech')
-  var messageBestproject=documrnt.getElementById('bestproject')
+  var messagePortfolio=document.getElementById("portfolio")
+  var messageTech=document.getElementById('tech')
+  var messageBestProject=document.getElementById('project')
   var messageHobbies=document.getElementById('hobbies')
   var messageQuote=document.getElementById('quote')
   var messageResults = document.getElementById('results');
