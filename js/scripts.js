@@ -1,4 +1,4 @@
-ar config = {
+var config = {
   apiKey: "AIzaSyDXxkIIamQTZQsTrrXhcJMuwfQEXE5P23A",
   authDomain: "finalproject-6363d.firebaseapp.com",
   databaseURL: "https://finalproject-6363d.firebaseio.com",
