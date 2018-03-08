@@ -19,27 +19,28 @@
 <body>
   <div class="container-fluid">
 
-    <div class="header row">
-      <nav>
-        <ul>
-          <a href="index.html" id="button-header">
-            <li>Public</li>
-          </a>
-          <a href="#" onclick="" data-toggle="modal" data-target="#myModal" id="button-header">
-            <li id="member">Member log-in</li>
-          </a>
-          <a href="#" id="signOut" id="button-header">
-            <li>Signout</li>
-          </a>
-          <a href="#" id="button-header">
-            <li>Competitions</li>
-          </a>
-        </ul>
-      </nav>
-      <div class="pull-right">
-        <input type="text" value="search" id="serchBox">
-        <input type="button" value="Search" class="btn btn-primary">
-      </div>
+        <div class="header row">
+            <nav>
+                <ul>
+                    <a href="index.html">
+                        <li>Public</li>
+                    </a>
+                    <a href="#" onclick="" data-toggle="modal" data-target="#myModal" >
+                        <li id="member" >Member log-in</li>
+                    </a>
+                    <a href="#" id="signOut">
+                        <li>Signout</li>
+                    </a>
+                    <a href="#" >
+                        <li>Competitions</li>
+                    </a>
+                </ul>
+            </nav>
+            <div class="pull-right">
+                <input type="text" value="search" id="serchBox">
+                <input type="button" value="Search" class="btn btn-primary">
+            </div>
+
 
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -119,7 +120,7 @@
                           </div>
                           <button type="submit" class="btn btn-default" id="savedata">Accede</button>
                       </form>
-                  </div>
+                    </div>
               </div>
           </div>
       </div>
@@ -133,6 +134,7 @@
           <br><br><br>
           <hr>
           <h2>Hobbies</h2>
+
           <textarea rows="2" cols="50" id="hobbies"></textarea>
           <h2>Quote</h2>
           <textarea rows="6" cols="50" id="quote"></textarea>
