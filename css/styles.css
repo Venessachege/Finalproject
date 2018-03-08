@@ -1,10 +1,10 @@
-/* body{
+body{
     padding:0px;
     margin:0px;
 }
 .container-fluid{
  padding:0px;
-} */
+} 
 #signOut{
     display: none;
 }
@@ -18,11 +18,7 @@ nav ul li{
     height:200px;
 
 }
-/* .header input,.header button{
-    float:right;
-    padding:0px;
-    margin:20px;
-} */
+
 .item{
     margin:0px;
     border-radius:5px;
@@ -45,11 +41,31 @@ nav ul li{
     align-items:center;
 
 }
+.container h5{
+    width:200px;
+    margin-right:0px;
+}
+.search{
+    margin-bottom:0px;
+}
 .glyphicon{
   font-size: 400px;
   text-align: center;
 }
-img{
-  height: 400px;
-  width: 400px;
+#addition{
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    margin-right:40px; 
+    margin-top:0px;
+}
+.glyphicon.glyphicon-plus{
+    font-size:20px;
+}
+.topline {
+    height:2px
+}
+.topline hr{
+    margin:0px;
+    padding:0px;
 }

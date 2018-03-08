@@ -74,46 +74,43 @@ firebase.auth().onAuthStateChanged(function(user) {
 $(document).ready(function() {
 
 });
-<<<<<<< HEAD
 
 //user interface logic
 
   // consttructor for the people to store profile
 
- person (picture,name,bestproject,personalPortfolio){
+ function person (picture,name,bestproject,personalPortfolio,hobbies) {
       this.picture=picture;
       this.name=name;
       this.bestproject=bestproject;
       this.personalPortfolio=personalPortfolio;
+      this.hobbies=hobbies;
  }
 
+//porting the infromation from the modal and saving it to a variable
+  var name1= $("").val();
+ //creating  the object
+ var person1=new person (name1)
+ people.push(person1);
  //array to store the people
-  var people=[{person1:{
-                       name:"",
-                       bestproject:"",
-                       PersonalPortfolio:"",
-                       Picturelink: "",
-                      }},
-                      {person2:{
-                        name:"",
-                        bestproject:"",
-                        PersonalPortfolio:""
-                       }},
-                       {person3:{
-                        name:"",
-                        bestproject:"",
-                        PersonalPortfolio:""
-                       }},
-                       {person4:{
-                        name:"",
-                        bestproject:"",
-                        PersonalPortfolio:""
-                       }},
-                       {person5:{
-                        name:"",
-                        bestproject:"",
-                        PersonalPortfolio:""
-                       }}
-  ];
-=======
->>>>>>> ae6fa2354545cc94e983d5d9d11c26688f4c0493
+  var people=[];
+//displaying the people in the public in a card
+$("").append(
+  "<li>"+
+  "<div class=\"uk-card uk-card-default\">"+
+      "<div class=\"uk-card-media-top uk-flex uk-flex-center uk-margin-remove\">" +
+          "<img class=\"uk-margin-remove\"  src=\"Images/man-01.png\" alt=\"\" >"+
+      "</div>"+
+      "<div class=\"uk-card-body uk-text-center\">"+
+        "<h6 class=\"uk-text-warning\">"+Name+"</h6>"+
+         "<p>"+    
+              "<div>"+"<a class=\"uk-text-warning\" href=\"#\">"+BestWork+"</a>"+"</div>"+
+           "<div>"+"<a class=\"uk-text-warning\" href=\"#\">"+Personalportfolio+"</a>"+"</div>"+
+            "<button class=\"uk-button-link\">"+"<a class=\"uk-text-warning\" href=\"\">"+ SeeMore+"</a>"+"</button>"+
+          "</p>"+
+      "</div>"+
+  "</div>"+
+"</li>"
+);
+
+//code for the canvas
