@@ -69,6 +69,7 @@ $(document).ready(function() {
 
   var messagesRef = firebase.database().ref();
   var messageField = document.getElementById('messageInput');
+  var messageField = document.getElementById('messageInput2');
   var messageResults = document.getElementById('results');
 
   // Save data to firebase
@@ -85,7 +86,7 @@ $(document).ready(function() {
   $("#savedata").click(function() {
     savedata()
   })
-
+  
 
 
   setTimeout(function(){

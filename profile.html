@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
@@ -21,16 +22,16 @@
     <div class="header row">
       <nav>
         <ul>
-          <a href="index.html">
+          <a href="index.html" id="button-header">
             <li>Public</li>
           </a>
-          <a href="#" onclick="" data-toggle="modal" data-target="#myModal">
+          <a href="#" onclick="" data-toggle="modal" data-target="#myModal" id="button-header">
             <li id="member">Member log-in</li>
           </a>
-          <a href="#" id="signOut">
+          <a href="#" id="signOut" id="button-header">
             <li>Signout</li>
           </a>
-          <a href="#">
+          <a href="#" id="button-header">
             <li>Competitions</li>
           </a>
         </ul>
@@ -46,9 +47,9 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Login</h4>
             </div>
             <div class="modal-body text-center" id="firebaseui-auth-container">
 
@@ -63,7 +64,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="well">
-          <img alt="" class="pic">
+          <img alt="" class="pic" id="imageborder">
           <!-- contains icture of the user -->
           <!-- <p> <span class="glyphicon glyphicon-user" id="pic"></span></p>  -->
         </div>
@@ -74,18 +75,59 @@
         </ul>
       </div>
       <div class="col-md-6">
+        <!-- Modal for Edit Profile -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
+                  </div>
+                  <div class="modal-body text-center">
+                      <form>
+                          <div class="form-group">
+                              <label for="name">Project</label>
+                              <input type="text" class="form-conrtol" id="email" placeholder="Your Name">
+                          </div>
+                          <div>
+                              <label for="name">Tech</label>
+                              <input type="name" class="form-conrtol" id="email" placeholder="Tech knowledge">
+                          </div>
+                          <div>
+                              <label for="name">Portfolio</label>
+                              <input type="name" class="form-conrtol" id="email" placeholder="Link to your portfolio">
+                          </div>
+                          <div>
+                              <label for="name" id='messageInput'>Hobbies</label>
+                              <input type="name" class="form-conrtol" id="email" placeholder="Activities you do">
+                          </div>
+                          <div>
+                              <label for="name" id='messageInput2'>Quote</label>
+                              <input type="text-area" class="form-conrtol" id="email" placeholder="Your Quote">
+                          </div>
+                          <button type="submit" class="btn btn-default" id="savedata">Accede</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
         <div class="well">
-          <input type='text' id='messageInput' placeholder='Enter your data here...'>
-          <button type="button" id="savedata">Save Data</button>
-          <br><br><br>
-          <hr>
-          <h2>Results</h2>
-          <textarea rows="10" cols="50" id="results"></textarea>
-
+          <!-- <input type='text' id='messageInput' placeholder='Enter your data here...'>
+          <button type="button" id="savedata">Save Data</button> -->
+          <!-- <br><br><br>
+          <hr> -->
+          <h2>Hobbies</h2>
+          <textarea rows="2" cols="50" id="results"></textarea>
+          <h2>Quote</h2>
+          <textarea rows="6" cols="50" id="results"></textarea>
         </div>
         <div class="text-center">
-          <button class="btn btn-primary">Edit Profile</button>
-          <button class="btn btn-primary">Hire</button>
+          <a href="#" onclick="" data-toggle="modal" data-target="#myModal2">
+            <button class="btn btn-primary" id="button-edit">Edit Profile</button>
+          </a>
+          <button class="btn btn-primary" id="button-edit">Hire</button>
         </div>
       </div>
     </div>
