@@ -46,14 +46,15 @@ firebase.auth().onAuthStateChanged(function(user) {
     user.providerData.forEach(function(profile) {
       // console.log("Sign-in provider: " + profile.providerId);
       console.log("  Provider-specific UID: " + profile.uid);
+      // profile = new Person(profile.photoURL,profile.displayName,profile.uid,profile.email)
       userId = profile.uid;
       // console.log("  Name: " + profile.displayName);
       // console.log("  Email: " + profile.email);
       console.log("  Photo URL: " + profile.photoURL);
       $('li#name').text(profile.displayName)
       $('li#email').text(profile.email)
-      $('#pic').text(profile.photoURL)
-      $('.pic').attr("src", profile.photoURL)
+      // $('#pic').text(profile.photoURL)
+      $('#pic').attr("src", profile.photoURL)
 
 
 
@@ -86,14 +87,7 @@ $(document).ready(function() {
 
 //user interface logic
 
-// consttructor for the people to store profile
 
-var person = function(picture, name, bestproject, personalPortfolio) {
-  this.picture = picture;
-  this.name = name;
-  this.bestproject = bestproject;
-  this.personalPortfolio = personalPortfolio;
-};
 
 //array to store the peopl
 var people = [{
