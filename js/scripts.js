@@ -76,51 +76,77 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 $(document).ready(function() {
 
-  var messagesRef = firebase.database().ref();
-  var messageField = document.getElementById('messageInput');
-  // var messageField = document.getElementById('messageInput2');
 
-  var messagePortfolio=document.getElementById("portfolio")
-  var messageTech=document.getElementById('tech')
-  var messageBestProject=document.getElementById('project')
-  var messageHobbies=document.getElementById('hobbies')
-  var messageQuote=document.getElementById('quote')
-  var messageResults = document.getElementById('results');
-  // Save data to firebase
-  function savedata() {
-    var message = messageField.value;
+  var messagesRef = firebase.database().ref();
+  var messageResults = document.getElementById('project');
+  var messageResults = document.getElementById('portfolio');
+  var messageResults = document.getElementById('tech');
+  function savedata(messageField,techField,portfolioField,hobbiesField,quoteField) {
+
 
     // messagesRef.child('users').child(userId).push(profile);
     // messageField.value = '';
   // }
-    messagesRef.child('users').child(userId).push({
-      fieldName: 'messageField',
-      text: message
+    messagesRef.child('users').child(userId).child("profile").push({
+      project:messageField,
+      tech:techField,
+      portfolio:portfolioField,
+      hobby:hobbiesField,
+      quote:quoteField
     });
-    messageField.value = '';
+
   }
 
-  $("#savedata").click(function() {
-    savedata()
+  $(".saveDataClass").submit(function() {
+    event.preventDefault()
+
+    var messageField = document.getElementById('messageInput').value;
+    var techField = document.getElementById('messageInput1').value;
+    var portfolioField = document.getElementById('messageInput2').value;
+    var hobbiesField = document.getElementById('messageInput3').value;
+    var quoteField = document.getElementById('messageInput4').value;
+
+    savedata(messageField,techField,portfolioField,hobbiesField,quoteField)
   })
 
 
 
   setTimeout(function() {
-    messagesRef.child('users').child(userId).limitToLast(10).on('child_added', function(snapshot) {
+    messagesRef.child('users').child(userId).child("profile").limitToLast(1).on('child_added', function(snapshot) {
       var data = snapshot.val();
-      var message = data.text;
-
+      var message = data.project;
+      var tech = data.tech;
+      var portfolio = data.portfolio;
+      var quote = data.quote;
+      var hobby = data.hobby;
+      console.log(message);
+      console.log(tech);
+      console.log(portfolio);
+      console.log(hobby);
+      console.log(quote);
       if (message != undefined) {
         messageResults.value += '\n' + message;
-
+        $('#project').text(' : ' + message);
+        $('#portfolio').text(' : ' + portfolio);
+        $('#hobbies').text( hobby);
+        $('#quote').text(quote);
+        $('#tech').text(' : ' + tech);
+  // $('#portfolio').append(' : ' + ' ' + message)
+  // $('#tech').append(' : ' + ' ' + message)
+  // $('#project').append(' : ' + ' ' + message)
+  // $('#project').append(' : ' + ' ' + message)
       }
     });
-  }, 3000);
+  }, 1000);
 
-  // Update results when data is added
+  //trying to  Update results when data is added
 
-  console.log("snsjns");
+  // var newPostKey=firebase.database().ref().child('users').child("profile").push().key;
+  // var updates={};
+  // updates["/users/profile/" +newPostKey]=postData;
+  // updates['/users-profile/' + userId + '/' +newPostKey] = postData;
+  //
+  // return  firebase.database().ref().update(updates)
 
 });
 
