@@ -79,8 +79,13 @@ $(document).ready(function() {
   var messagesRef = firebase.database().ref();
   var messageField = document.getElementById('messageInput');
   // var messageField = document.getElementById('messageInput2');
-  var messageResults = document.getElementById('results');
 
+  var messagePortfolio=documrnt.getElementById("portfolio")
+  var messageTech=documrnt.getElementById('tech')
+  var messageBestproject=documrnt.getElementById('bestproject')
+  var messageHobbies=document.getElementById('hobbies')
+  var messageQuote=document.getElementById('quote')
+  var messageResults = document.getElementById('results');
   // Save data to firebase
   function savedata() {
     var message = messageField.value;
@@ -108,6 +113,7 @@ $(document).ready(function() {
 
       if (message != undefined) {
         messageResults.value += '\n' + message;
+
       }
     });
   }, 3000);
