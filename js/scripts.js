@@ -75,14 +75,53 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Database
 
 $(document).ready(function() {
-  var result = $('#results')
-  database.on('value', function(snap){
-    console.log(snap.val());
-    var data = snap.val()
 
-    result.append(data.Age);
-    
-  });
+  var messagesRef = firebase.database().ref();
+  var messageField = document.getElementById('messageInput');
+  // var messageField = document.getElementById('messageInput2');
+
+  var messagePortfolio=document.getElementById("portfolio")
+  var messageTech=document.getElementById('tech')
+  var messageBestproject=document.getElementById('bestproject')
+  var messageHobbies=document.getElementById('hobbies')
+  var messageQuote=document.getElementById('quote')
+  var messageResults = document.getElementById('results');
+  // Save data to firebase
+  function savedata() {
+    var message = messageField.value;
+
+    // messagesRef.child('users').child(userId).push(profile);
+    // messageField.value = '';
+  // }
+    messagesRef.child('users').child(userId).push({
+      fieldName: 'messageField',
+      text: message
+    });
+    messageField.value = '';
+  }
+
+  $("#savedata").click(function() {
+    savedata()
+  })
+
+
+
+  setTimeout(function() {
+    messagesRef.child('users').child(userId).limitToLast(10).on('child_added', function(snapshot) {
+      var data = snapshot.val();
+      var message = data.text;
+
+      if (message != undefined) {
+        messageResults.value += '\n' + message;
+
+      }
+    });
+  }, 3000);
+
+  // Update results when data is added
+
+  console.log("snsjns");
+
 });
 
 //user interface logic

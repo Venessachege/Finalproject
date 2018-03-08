@@ -59,30 +59,91 @@
       </div>
 
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="well" >
-                  <img  class="img img-reponsive" id="pic">
-                    <!-- contains icture of the user -->
-            <!-- <p> <span class="glyphicon glyphicon-user" id="pic"></span></p>  -->
-                </div>
-                <ul class="list-group text-center">
-                    <li class="list-group-item" id="name">Name</li>
-                    <li class="list-group-item" id="email">Best Project</li>
-                    <li class="list-group-item">Current Project</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <div class="well" style="height:40vh" id="image">
-                    <!-- <pre id="object"></pre> -->
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary">Edit Profile</button>
-                    <button class="btn btn-primary">Hire</button>
-                </div>
-            </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="well">
+
+          <img alt="" id="pic">
+
+          <img alt="" class="pic" id="imageborder">
+
+
+          <!-- contains icture of the user -->
+
+          <!-- contains picture of the user -->
+
+          <!-- <p> <span class="glyphicon glyphicon-user" id="pic"></span></p>  -->
         </div>
+        <ul class="list-group text-center">
+          <li class="list-group-item" id="name">Name</li>
+          <li class="list-group-item" id="email">Email</li>
+          <li class="list-group-item">Portfolio</li>
+          <li class="list-group-item">Best Project</li>
+          <li class="list-group-item">Tech</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <!-- Modal for Edit Profile -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
+                  </div>
+                  <div class="modal-body text-center">
+                      <form>
+                          <div class="form-group">
+                              <label for="name">Project</label>
+                              <input type="text" class="form-conrtol" id="email" placeholder="Link to your project">
+                          </div>
+                          <div>
+                              <label for="name">Tech</label>
+                              <input type="name" class="form-conrtol" id="email" placeholder="Tech knowledge">
+                          </div>
+                          <div>
+                              <label for="name">Portfolio</label>
+                              <input type="name" class="form-conrtol" id="email" placeholder="Link to your portfolio">
+                          </div>
+                          <div>
+                              <label for="name" id='messageInput'>Hobbies</label>
+                              <input type="name" class="form-conrtol" id="email" placeholder="Activities you do">
+                          </div>
+                          <div>
+                              <label for="name" id='messageInput2'>Quote</label>
+                              <input type="text-area" class="form-conrtol" id="email" placeholder="Your Quote">
+                          </div>
+                          <button type="submit" class="btn btn-default" id="savedat">Accede</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <!-- <div class="well">
+          <input type='text' id='messageInput' placeholder='Enter your data here...'>
+          <h2>Results</h2>
+         <textarea rows="10" cols="50" id="results"></textarea>
+          <button type="button" id="savedata">Save Data</button> -->
+        <!-- </div> -->
+        <div class="well">
+          <br><br><br>
+          <hr>
+          <h2>Hobbies</h2>
+          <textarea rows="2" cols="50" id="results"></textarea>
+          <h2>Quote</h2>
+          <textarea rows="6" cols="50" id="results"></textarea>
+        </div>
+        <div class="text-center">
+          <a href="#" onclick="" data-toggle="modal" data-target="#myModal2">
+            <button class="btn btn-primary" id="button-edit">Edit Profile</button>
+          </a>
+          <button class="btn btn-primary" id="button-edit">Hire</button>
+        </div>
+      </div>
       </div>
     </div>
   </div>
