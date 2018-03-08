@@ -1,16 +1,16 @@
 var config = {
-  apiKey: "AIzaSyDXxkIIamQTZQsTrrXhcJMuwfQEXE5P23A",
-  authDomain: "finalproject-6363d.firebaseapp.com",
-  databaseURL: "https://finalproject-6363d.firebaseio.com",
-  projectId: "finalproject-6363d",
-  storageBucket: "finalproject-6363d.appspot.com",
-  messagingSenderId: "999310279072"
+    apiKey: "AIzaSyByoAbvVGhI6Dsexa6bzx5A8JodfseqdCI",
+    authDomain: "helloworld-fd9ac.firebaseapp.com",
+    databaseURL: "https://helloworld-fd9ac.firebaseio.com",
+    projectId: "helloworld-fd9ac",
+    storageBucket: "helloworld-fd9ac.appspot.com",
+    messagingSenderId: "419845074355"
 };
 
 
 firebase.initializeApp(config)
 // Get a reference to the database service
-// var database = firebase.database().ref('users');
+var database = firebase.database().ref().child('user');
 var user = firebase.auth().currentUser;
 
 // if (user != null) {
@@ -72,5 +72,12 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Database
 
 $(document).ready(function() {
+  var result = $('#results')
+  database.on('value', function(snap){
+    console.log(snap.val());
+    var data = snap.val()
 
+    result.append(data.Age);
+    
+  });
 });
