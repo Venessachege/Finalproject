@@ -98,7 +98,7 @@ cursor: pointer;
     background-color: lightblue;
 }
 .footer {
-    
+
     font-family: 'Poiret One', cursive;
     margin-top:20px;
     height:100px;
@@ -131,4 +131,9 @@ cursor: pointer;
 }
 .look{
     font-family: 'Poiret One', cursive;
+}
+.img{
+  height: 300px;
+  width: 200px;
+  padding-top: 12px;
 }
