@@ -1,6 +1,6 @@
 /* Background image for both gradient */
 body{
-    background: linear-gradient(269deg,  #831e76, #f67280, #b320d3);
+    background: linear-gradient(269deg,  #704b06, #eaa54c, #724307);
     background-size: 400% 400%;
    -webkit-animation: AnimationName 19s ease infinite;
    -moz-animation: AnimationName 19s ease infinite;
@@ -165,6 +165,8 @@ cursor: pointer;
 }
 #uk-text{
 font-family: 'Poiret One', cursive;
+font-weight:bolder;
+
 }
 #apo{
     margin: 0px;
@@ -212,4 +214,13 @@ font-family: 'Poiret One', cursive;
    margin: -3px;
    padding-top: 10px;
    padding-bottom: 10px;margin: 0px;
+}
+#hobbies, #quote{
+  font-size:25px;
+  color: red;
+}
+#quote{
+  font-style: italic;
+  text-align: center;
+  color: green;
 }

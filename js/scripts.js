@@ -25,7 +25,7 @@ var userId = 0,
 //firebase ui
 
 var uiConfig = {
-  signInSuccessUrl: '/profile.html',
+  signInSuccessUrl: '/html/profile.html',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
   ],
@@ -112,7 +112,7 @@ $(document).ready(function() {
 
 
   setTimeout(function() {
-    messagesRef.child('users').child(userId).child("profile").limitToLast(1).on('child_added', function(snapshot) {
+    messagesRef.child('users').child(userId).child("profile").limitToLast(10).on('child_added', function(snapshot) {
       var data = snapshot.val();
       var message = data.project;
       var tech = data.tech;
@@ -163,69 +163,69 @@ $(document).ready(function() {
  }
 
 //porting the infromation from the modal and saving it to a variable
-  var name1= $("").val();
+  // var name1= $("").val();
  //creating  the object
- var person1=new person (name1)
- people.push(person1);
- //array to store the people
-  var people=[];
-//displaying the people in the public in a card
-$("").append(
-  "<li>"+
-  "<div class=\"uk-card uk-card-default\">"+
-      "<div class=\"uk-card-media-top uk-flex uk-flex-center uk-margin-remove\">" +
-          "<img class=\"uk-margin-remove\"  src=\"Images/man-01.png\" alt=\"\" >"+
-      "</div>"+
-      "<div class=\"uk-card-body uk-text-center\">"+
-        "<h6 class=\"uk-text-warning\">"+Name+"</h6>"+
-         "<p>"+    
-              "<div>"+"<a class=\"uk-text-warning\" href=\"#\">"+BestWork+"</a>"+"</div>"+
-           "<div>"+"<a class=\"uk-text-warning\" href=\"#\">"+Personalportfolio+"</a>"+"</div>"+
-            "<button class=\"uk-button-link\">"+"<a class=\"uk-text-warning\" href=\"\">"+ SeeMore+"</a>"+"</button>"+
-          "</p>"+
-      "</div>"+
-  "</div>"+
-"</li>"
-);
-
-//code for the canvas
-
-
-//array to store the peopl
-var people = [{
-    person1: {
-      name: "",
-      bestproject: "",
-      PersonalPortfolio: "",
-      Picturelink: "",
-    }
-  },
-  {
-    person2: {
-      name: "",
-      bestproject: "",
-      PersonalPortfolio: ""
-    }
-  },
-  {
-    person3: {
-      name: "",
-      bestproject: "",
-      PersonalPortfolio: ""
-    }
-  },
-  {
-    person4: {
-      name: "",
-      bestproject: "",
-      PersonalPortfolio: ""
-    }
-  },
-  {
-    person5: {
-      name: "",
-      bestproject: "",
-      PersonalPortfolio: ""
-    }
-  }
-];
+//  var person1=new person (name1)
+//  people.push(person1);
+//  //array to store the people
+//   var people=[];
+// //displaying the people in the public in a card
+// $("").append(
+//   "<li>"+
+//   "<div class=\"uk-card uk-card-default\">"+
+//       "<div class=\"uk-card-media-top uk-flex uk-flex-center uk-margin-remove\">" +
+//           "<img class=\"uk-margin-remove\"  src=\"Images/man-01.png\" alt=\"\" >"+
+//       "</div>"+
+//       "<div class=\"uk-card-body uk-text-center\">"+
+//         "<h6 class=\"uk-text-warning\">"+Name+"</h6>"+
+//          "<p>"+
+//               "<div>"+"<a class=\"uk-text-warning\" href=\"#\">"+BestWork+"</a>"+"</div>"+
+//            "<div>"+"<a class=\"uk-text-warning\" href=\"#\">"+Personalportfolio+"</a>"+"</div>"+
+//             "<button class=\"uk-button-link\">"+"<a class=\"uk-text-warning\" href=\"\">"+ SeeMore+"</a>"+"</button>"+
+//           "</p>"+
+//       "</div>"+
+//   "</div>"+
+// "</li>"
+// );
+//
+// //code for the canvas
+//
+//
+// //array to store the peopl
+// var people = [{
+//     person1: {
+//       name: "",
+//       bestproject: "",
+//       PersonalPortfolio: "",
+//       Picturelink: "",
+//     }
+//   },
+//   {
+//     person2: {
+//       name: "",
+//       bestproject: "",
+//       PersonalPortfolio: ""
+//     }
+//   },
+//   {
+//     person3: {
+//       name: "",
+//       bestproject: "",
+//       PersonalPortfolio: ""
+//     }
+//   },
+//   {
+//     person4: {
+//       name: "",
+//       bestproject: "",
+//       PersonalPortfolio: ""
+//     }
+//   },
+//   {
+//     person5: {
+//       name: "",
+//       bestproject: "",
+//       PersonalPortfolio: ""
+//     }
+//   }
+// ];

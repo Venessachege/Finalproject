@@ -9,9 +9,9 @@
   <!-- bootstrap css -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    <!-- custom css file -->
-    <link rel="stylesheet" href="../css/styles.css" type="text/css" /> 
-  
-  
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+
+
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
@@ -36,16 +36,16 @@
                     <a href="#" id="signOut">
                         <li>Signout</li>
                     </a>
-                    <a href="#" >
+                    <a href="/html/competitions.html" >
                         <li>Competitions</li>
                     </a>
                 </ul>
             </nav>
-            <div class="pull-right">
+            <!-- <div class="pull-right">
                 <input type="text" value="search" id="serchBox">
                 <input type="button" value="Search" class="btn btn-primary">
             </div>
-
+ -->
 
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -123,7 +123,7 @@
                               <label for="name">Quote</label>
                               <input type="text-area" class="form-conrtol" id="messageInput4" placeholder="Your Quote">
                           </div>
-                          <button type="submit" class="btn btn-default" id="savedata">Accede</button>
+                          <button type="submit" class="btn btn-default" id="savedata">Submit</button>
                       </form>
                     </div>
               </div>
@@ -140,21 +140,21 @@
           <hr>
           <h2>Hobbies</h2>
 
-          <textarea rows="2" cols="50" id="hobbies"></textarea>
+          <textarea rows="2" cols="30" id="hobbies" class="form-control "></textarea>
           <h2>Quote</h2>
-          <textarea rows="6" cols="50" id="quote"></textarea>
+          <textarea rows="6" cols="30" id="quote" class="form-control"></textarea>
         </div>
         <div class="text-center">
           <a href="#" onclick="" data-toggle="modal" data-target="#myModal2">
             <button class="btn btn-primary" id="button-edit">Edit Profile</button>
           </a>
-          <button class="btn btn-primary" id="button-edit">Hire</button>
+
         </div>
       </div>
       </div>
     </div>
   </div>
-  
+
    <!-- UIkit JS -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
