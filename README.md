@@ -7,7 +7,8 @@ Peter Munga
 Steve Wachira
 
 ##  Description
-This project is about a 
+This project is about a school yearbook that lets alumins of the school keep in touch with each other.It also provides a platform which employers can use to hire the students by viewing their projects and posting competitions to decide on who to hire.
+
 ## Technology Used
 Html,Css,Javascript ,firebase
 
