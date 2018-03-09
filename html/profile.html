@@ -85,9 +85,9 @@
         <ul class="list-group text-center">
           <li class="list-group-item" id="name">Name</li>
           <li class="list-group-item" id="email">Email</li>
-          <li class="list-group-item">Portfolio</li>
-          <li class="list-group-item">Best Project</li>
-          <li class="list-group-item">Tech</li>
+          <li  class="list-group-item" >Portfolio: <span id="portfolio"></span></li>
+          <li class="list-group-item">Best Project: <span id="project"></span></li>
+          <li class="list-group-item">Tech: <span id="tech"></span></li>
         </ul>
       </div>
       <div class="col-md-6">
@@ -102,29 +102,28 @@
                       <h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
                   </div>
                   <div class="modal-body text-center">
-                      <form>
+                      <form class="saveDataClass">
                           <div class="form-group">
                               <label for="name">Project</label>
-                              <input type="text" class="form-conrtol" id="edit" placeholder="Link to your project">
+                              <input type="text" class="form-conrtol" id="messageInput" placeholder="Link to your project">
                           </div>
                           <div>
                               <label for="name">Tech</label>
-                              <input type="name" class="form-conrtol" id="edit" placeholder="Tech knowledge">
+                              <input type="name" class="form-conrtol"id="messageInput1" placeholder="Tech knowledge">
                           </div>
                           <div>
                               <label for="name">Portfolio</label>
-                              <input type="name" class="form-conrtol" id="edit" placeholder="Link to your portfolio">
+                              <input type="name" class="form-conrtol" id="messageInput2"placeholder="Link to your portfolio">
                           </div>
                           <div>
-                              <label for="name" id='messageInput'>Hobbies</label>
-                              <input type="name" class="form-conrtol" id="edit" placeholder="Activities you do">
+                              <label for="name" >Hobbies</label>
+                              <input type="name" class="form-conrtol" id="messageInput3" placeholder="Activities you do">
                           </div>
                           <div>
-                              <label for="name" id='messageInput2'>Quote</label>
-                              <input type="text-area" class="form-conrtol" id="edit" placeholder="Your Quote">
+                              <label for="name">Quote</label>
+                              <input type="text-area" class="form-conrtol" id="messageInput4" placeholder="Your Quote">
                           </div>
-                          <button type="submit" class="btn btn-default" id="savedat">Accede</button>
-
+                          <button type="submit" class="btn btn-default" id="savedata">Accede</button>
                       </form>
                     </div>
               </div>
@@ -140,9 +139,10 @@
           <br><br><br>
           <hr>
           <h2>Hobbies</h2>
-          <textarea rows="2" cols="50" id="results"></textarea>
-          <h2 class="look">Quote</h2>
-          <textarea rows="6" cols="50" id="results"></textarea>
+
+          <textarea rows="2" cols="50" id="hobbies"></textarea>
+          <h2>Quote</h2>
+          <textarea rows="6" cols="50" id="quote"></textarea>
         </div>
         <div class="text-center">
           <a href="#" onclick="" data-toggle="modal" data-target="#myModal2">
