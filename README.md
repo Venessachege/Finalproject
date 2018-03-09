@@ -1,16 +1,16 @@
 # YearBook
 
 ## Contributors
-Venessa Chege
-Peter Muturi
-Peter Munga
-Steve Wachira
+1.Venessa Chege
+2.Peter Muturi
+3.Peter Munga
+4.Steve Wachira
 
 ##  Description
-This project is about a school yearbook that lets alumins of the school keep in touch with each other.It also provides a platform which employers can use to hire the students by viewing their projects and posting competitions to decide on who to hire.
+This project is about a school yearbook that lets alumnis of the school keep in touch with each other.It also provides a platform which employers can use to hire the students by viewing their projects and posting competitions to decide on who to hire.
 
 ## Technology Used
-Html,Css,Javascript ,firebase
+Html,Css,Javascript , bootstrap, and firebase
 
 ##  Setup Instructions
 Clone or fork the Pig Dice  repository from my github then create a local repository where you shall recreate the repository.
