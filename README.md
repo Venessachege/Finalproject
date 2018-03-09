@@ -1,10 +1,10 @@
 # YearBook
 
 ## Contributors
-1.Venessa Chege
-2.Peter Muturi
-3.Peter Munga
-4.Steve Wachira
+1.Venessa Chege <br>
+2.Peter Muturi  <br>
+3.Peter Munga <br>
+4.Steve Wachira <br>
 
 ##  Description
 This project is about a school yearbook that lets alumnis of the school keep in touch with each other.It also provides a platform which employers can use to hire the students by viewing their projects and posting competitions to decide on who to hire.
