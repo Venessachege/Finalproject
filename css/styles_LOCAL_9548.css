@@ -1,0 +1,44 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+.container-fluid{
+ padding:0px;
+}
+ul li{
+    float:left;
+    list-style:none;
+    padding:10px;
+    
+}
+#carousel-example-generic{
+    height:200px;
+    
+}
+.header input,.header button{
+    float:right;
+    padding:0px;
+    margin:20px;
+}
+.item{
+    margin:0px;
+    border-radius:5px;
+    height:250px;
+    background-color: lightblue;
+}
+.footer {
+    margin-top:20px;
+    height:100px;
+    background:lightgrey;
+    text-align:center;
+    
+    
+}
+.footer p{
+    margin-top:40px;
+}
+.uk-card-media-top img{
+    display:flex;
+    align-items:center;
+
+}

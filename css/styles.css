@@ -4,8 +4,9 @@ body{
     background-size: 400% 400%;
    -webkit-animation: AnimationName 19s ease infinite;
    -moz-animation: AnimationName 19s ease infinite;
-    animation: AnimationName 19s ease infinite; */
-    background-image: url('Images/background.jpg');
+
+    animation: AnimationName 19s ease infinite;
+
 }
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
@@ -74,7 +75,6 @@ nav ul li{
 .button-header{
 color: White;
 background: Transparent;
-text;
 font-family: 'Poiret One', cursive;
 font-size: 20px;
 padding: 5px;
@@ -111,25 +111,50 @@ cursor: pointer;
 .footer p{
     margin-top:40px;
 }
-
-.glyphicon{
-  font-size: 400px;
-  text-align: center;
-}
-
-
 .uk-card-media-top img{
     display:flex;
     align-items:center;
 
 }
-.uk-text-warning{
-    color: linear-gradient(269deg, #5c5b5a, #d3aa75, #4c4a47);
-    background-size: 400% 400%;
-   -webkit-animation: AnimationName 19s ease infinite;
-   -moz-animation: AnimationName 19s ease infinite;
-    animation: AnimationName 19s ease infinite;
+/* styles for  competitions page*/
+.container h5{
+    width:200px;
+    margin-right:0px;
 }
+.search{
+    margin-bottom:0px;
+}
+.glyphicon{
+  font-size: 400px;
+  text-align: center;
+}
+#addition{
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    margin-right:40px;
+    margin-top:0px;
+}
+.glyphicon.glyphicon-plus{
+    font-size:20px;
+}
+.topline {
+    height:2px
+}
+.topline hr{
+    margin:0px;
+    padding:0px;
+}
+.specs{
+    border-left:1px solid white;
+}
+.specs2{
+    border-right:1px solid white;
+}
+.alignedRight{
+    text-align:right;
+}
+
 .look{
     font-family: 'Poiret One', cursive;
 }
@@ -137,4 +162,54 @@ cursor: pointer;
   height: 300px;
   width: 200px;
   padding-top: 12px;
+}
+#uk-text{
+font-family: 'Poiret One', cursive;
+}
+#apo{
+    margin: 0px;
+}
+#apoo{
+    margin: 0px;
+}
+.zzdf{
+    padding: 12px;
+}
+.footer {
+    color: orangered;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    opacity: 0.4;
+    font-family: 'Poiret One', cursive;
+    margin-top:20px;
+    height:100px;
+    text-align:center;
+ }
+ .footer p{
+    margin-top:40px;
+ }
+ div.container-fluid.zzdf{
+    padding: 0px;
+ }
+ div.footer{
+    margin: 0px;
+ }
+ .container-fluid{
+   padding: 0px;
+}
+.jumbotron{
+   color: orangered;
+   font-family: 'Poiret One', cursive;
+   background-color: black;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   opacity: 0.4;
+   margin-bottom: 0px;
+}
+.jumbo hr{
+   margin: -3px;
+   padding-top: 10px;
+   padding-bottom: 10px;margin: 0px;
 }
