@@ -58,6 +58,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 
+
+
     });
     ///end loop
     $('#firebaseui-auth-container').hide();
@@ -83,11 +85,9 @@ $(document).ready(function() {
   var messageResults = document.getElementById('tech');
   function savedata(messageField,techField,portfolioField,hobbiesField,quoteField) {
 
-
-    // messagesRef.child('users').child(userId).push(profile);
-    // messageField.value = '';
-  // }
+    // messagesRef.child('users').child(userId).child("profile").push({
     messagesRef.child('users').child(userId).child("profile").push({
+
       project:messageField,
       tech:techField,
       portfolio:portfolioField,
