@@ -1,11 +1,11 @@
 /* Background image for both gradient */
 body{
-    background: linear-gradient(269deg,  #704b06, #eaa54c, #724307);
+    background: linear-gradient(269deg,  #222a28, #67756b, #17682e, #9b9c2f);
     background-size: 400% 400%;
-   -webkit-animation: AnimationName 19s ease infinite;
-   -moz-animation: AnimationName 19s ease infinite;
+   -webkit-animation: AnimationName 17s ease infinite;
+   -moz-animation: AnimationName 17s ease infinite;
 
-    animation: AnimationName 19s ease infinite;
+    animation: AnimationName 17s ease infinite;
 
 }
 @-webkit-keyframes AnimationName {
@@ -37,9 +37,9 @@ body{
     /* background-image: url("/home/one/Documents/moringa_projects/Finalproject/Images/vincent-burkhead-147113-unsplash.jpg"); */
     background: linear-gradient(269deg, #704b06, #eaa54c, #724307);
     background-size: 400% 400%;
-   -webkit-animation: AnimationName 19s ease infinite;
-   -moz-animation: AnimationName 19s ease infinite;
-    animation: AnimationName 19s ease infinite;
+   -webkit-animation: AnimationName 10s ease infinite;
+   -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
 }
 #signOut{
     display: none;
@@ -61,8 +61,15 @@ body{
 nav ul li{
     float:left;
     list-style:none;
-    padding:10px;
+    padding:40px;
+    color: white;
+    font-family: cursive;
+    align-items: center;
 
+}
+nav ul li:hover{
+  color:cyan;
+  padding-top: 1%;
 }
 #carousel-example-generic{
     height:200px;
@@ -159,8 +166,8 @@ cursor: pointer;
     font-family: 'Poiret One', cursive;
 }
 .img{
-  height: 300px;
-  width: 200px;
+  height: 270px;
+  width: 250px;
   padding-top: 12px;
 }
 #uk-text{
